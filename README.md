@@ -7,7 +7,7 @@ I created this repo because I forget syntax a lot (too much to remember smh) so 
 - Simple, minimal code so it’s easy to read and re-use
 
 ## Usage 
-Run scripts directly (or make them executable) 
+Run scripts directly (or make them executable if they aren't already) 
 
 ```
 chmod +x scriptname.sh 
