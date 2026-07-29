@@ -13,8 +13,7 @@ fi
 function conv_and_mv {
     if [[ -f "$cover" ]]; then 
         echo "[+] Converting and moving the cover to specified path..."
-        convert "$cover" cover.jpg
-        rm "$cover" 
+        convert "$cover" cover.jpg && rm "$cover" 
         mv cover.jpg "$path"
         echo "[+] Done."
         

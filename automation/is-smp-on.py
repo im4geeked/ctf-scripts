@@ -40,7 +40,6 @@ while True:
     if online == True: 
         notify()
         print("Server just came online with players!")
-    
-    # check again after time interval (default is 15 seconds)
-    time.sleep(CHECK_INTERVAL)
+        # check again after time interval (default is 15 seconds)
+        time.sleep(CHECK_INTERVAL)
 
