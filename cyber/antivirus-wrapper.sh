@@ -3,11 +3,11 @@
 
 # helptext func
 function helptext {
-    echo "[-] Usage: $0 PATH"
+    echo "[-] Usage: $0 <destination_directory>"
     echo "[-] Failed"
 }     
 
-# conditional for when no variables are passed
+# conditional for when no arguements are passed
 
 if [ -z "$1" ]; then
     helptext
