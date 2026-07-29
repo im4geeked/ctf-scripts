@@ -4,13 +4,20 @@
 path=$1 
 cover=$2 
 
+# redundancy (if ~/PATH is included, the script will fail because it fails to expand with quotes in place)
+if [[ "$path" == "~/"* ]]; then 
+    path="${HOME}${path:1}"      
+fi
+
 # function to rename and move the file 
 function conv_and_mv {
     if [[ -f "$cover" ]]; then 
         echo "[+] Converting and moving the cover to specified path..."
-        convert "$cover" cover.jpg 
+        convert "$cover" cover.jpg
+        rm "$cover" 
         mv cover.jpg "$path"
         echo "[+] Done."
+        
     
     else
         echo "[-] Specified image not found"
